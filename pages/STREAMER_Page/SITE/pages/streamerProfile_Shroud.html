@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Shroud - BleeN</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	body {
+		background-repeat: no-repeat;
+	}
+
+	hr {
+		display: block;
+		height: 1px;
+		border: 0;
+		border-top: 1px solid rgb(0, 0, 0);
+		margin: 7% 2;
+		padding: 0;
+	}
+</style>
+
+<script type="text/javascript" src="index.js"></script>
+<link rel="stylesheet" href="style.css">
+
+<!-- Place  font-awesom icon kit here-->
+<script src="https://kit.fontawesome.com/150f468951.js" crossorigin="anonymous"></script>
+<link href="style.css" type="text/css" rel="stylesheet" />
+
+
+<style>
+	body {
+		font-family: "Lato", sans-serif
+	}
+
+	.mySlides {
+		display: none
+	}
+</style>
+</head>
+
+<body>
+
+
+	<!-- Navbar -->
+	<header>
+		<img class="logo" src="../../../Logo_Site.png" alt="logo">
+		<div class="topnav">
+
+			<nav>
+				<ul class="nav_pages">
+					<div class="search-container">
+						<form action="/action_page.php">
+							<input type="text" placeholder="Search.." name="search">
+							<button type="submit"><i class="fa fa-search"></i></button>
+						</form>
+					</div>
+					<li><a href="../../../index.html">Home</a></li>
+
+					<div class="dropdown">
+						<li><a href="#">Category</a></li>
+						<div class="dropdown-content">
+							<a href="../../../GAME_Page/pages/PUBG.html">PUBG</a>
+							<a href="#">CSGO</a>
+							<a href="#">LOL</a>
+							<a href="#">FIFA20</a>
+						</div>
+					</div>
+					<div class="dropdown">
+						<li><a href="#">Account</a></li>
+						<div class="dropdown-content">
+							<a href="../../../GAME_Page/pages/SignIn.html">Sign In</a>
+							<a href="../../../GAME_Page/pages/SignUp.html">Sign Up</a>
+						</div>
+					</div>
+				</ul>
+
+			</nav>
+
+			</label>
+
+		</div>
+		<hr />
+	</header>
+	<hr />
+
+	<!-- Page content -->
+
+	<!--Header-->
+	<div class="profile-header">
+		<img class="profile-pic" src="shroud_icon.png">
+		<div class="profile-info">
+			<p class="profile-name">Shroud</p>
+			<p class="profile-text">@totallynotshroud</p>
+			<p class="profile-text">7,044,761 followers</p>
+		</div>
+		<div class="profile-options">
+			<div id="report-profile">
+				Report
+			</div>
+			<div id="follow-profile" onclick="FollowUpdate()">
+				Follow
+			</div>
+			<div id="share-profile">
+				<img class="share-icon" onclick="ShowOptions()" src="share.png">
+				<div class="hide" id="share-dropdown">
+					<a class="share-option" href="#">Facebook</a>
+					<a class="share-option" href="#">Twitter</a>
+					<a class="share-option" href="#">Instagram</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Videos / Streams-->
+	<div class="profile-streams">
+		<p class="title">Streaming now</p>
+		<div class="stream-box">
+			<a href="https://www.youtube.com/embed/jbdsIViMdYE">
+
+				<div class="stream">
+					<img class="stream-thumb" src="http://i3.ytimg.com/vi/jbdsIViMdYE/hqdefault.jpg"></img>
+					<p id="stream-title-preview">SHROUD PUBG - Live Streaming</p>
+					<p id="stream-date-preview">NOW LIVE</p>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<p class="title">Popular Now</p>
+	<div class="profile-streams">
+		<div class="stream-box">
+			<a href="https://www.youtube.com/watch?v=eIhogfIsIHE">
+				<div class="stream">
+
+
+					<img class="stream-thumb" src="http://i3.ytimg.com/vi/eIhogfIsIHE/maxresdefault.jpg"></img>
+					<p id="stream-title-preview">Live Stream Shroud PUBG Global Invitational ( PGI ) 2018 Day 3</p>
+					<p id="stream-date-preview">MARCH 17</p>
+
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<p class="title">Videos from Shroud</p>
+	<div class="profile-videos">
+
+		<div class="video-box">
+			<a href="https://www.youtube.com/watch?v=LdZaqnAOthE">
+				<img class="video-thumb" src="http://i3.ytimg.com/vi/LdZaqnAOthE/maxresdefault.jpg"></img>
+				<p id="video-title-preview">SSHROUD VS SILVER</p>
+				<p id="video-info-preview">3.08.2016
+					<br>
+					6,233,112 views
+				</p>
+			</a>
+		</div>
+
+		<div class="video-box">
+			<a href="https://www.youtube.com/watch?v=6bnbF5qTZ4o">
+				<img class="video-thumb" src="http://i3.ytimg.com/vi/6bnbF5qTZ4o/maxresdefault.jpg"></img>
+				<p id="video-title-preview">SHROUDS BEST MOMENTS</p>
+				<p id="video-info-preview">17.05.2017
+					<br>
+					1,578,998 views
+				</p>
+			</a>
+		</div>
+		<div class="video-box">
+			<a href="https://www.youtube.com/watch?v=aMoZbJ39rwg">
+				<img class="video-thumb" src="http://i3.ytimg.com/vi/aMoZbJ39rwg/maxresdefault.jpg"></img>
+				<p id="video-title-preview">PUBG IN VR!!!</p>
+				<p id="video-info-preview">13.01.2018
+					<br>
+					13,980,313 views
+				</p>
+			</a>
+		</div>
+		<div class="video-box">
+			<a href="https://www.youtube.com/watch?v=WiUBM8bbDS4">
+				<img class="video-thumb" src="http://i3.ytimg.com/vi/WiUBM8bbDS4/maxresdefault.jpg"></img>
+				<p id="video-title-preview">WHY I DONT PLAY PUBG MOBILE</p>
+				<p id="video-info-preview">18.01.2019
+					<br>
+					3,517,826 views
+				</p>
+			</a>
+		</div>
+
+		<div class="video-box">
+			<a href="https://www.youtube.com/watch?v=Yd2Dq1LuTAg">
+				<img class="video-thumb" src="http://i3.ytimg.com/vi/Yd2Dq1LuTAg/maxresdefault.jpg"></img>
+				<p id="video-title-preview">MY NEW PARACHUTE SKIN IN PUBG</p>
+				<p id="video-info-preview">30.09.2019
+					<br>
+					743,541 views
+				</p>
+			</a>
+		</div>
+
+		<div class="video-box">
+			<a href="https://www.youtube.com/watch?v=oQtxXRWCX74">
+				<img class="video-thumb" src="http://i3.ytimg.com/vi/oQtxXRWCX74/maxresdefault.jpg"></img>
+				<p id="video-title-preview">THE RETURN TO PUBG</p>
+				<p id="video-info-preview">18.12.2019
+					<br>
+					1,366,452 views
+				</p>
+			</a>
+		</div>
+		
+		
+		
+	</div>
+
+	<!-- End Page Content -->
+
+	<!-- Side Menu-->
+
+	<div class="side">
+
+		<a href="#" class="nav-toggle-btn"> <i class="fas fa-bars"></i> </a>
+		<h1>SUBSCRIPTIONS</h1>
+
+		<ul>
+			<li class="icon"><a href="streamerProfile_Shroud.html"><img class="profile-thumb"
+						src="shroud_icon.png"></img></i>Shroud</a></li>
+
+			<li class="icon"><a href="streamerProfile_Grimmmz.html"><img class="profile-thumb"
+						src="grimmmz_icon.png"></img></i>Grimmmz</a></li>
+
+			<li class="icon"><a href="streamerProfile_chocoTaco.html"><img class="profile-thumb"
+						src="chocoTaco_icon.png"></img></i>chocoTaco</a></li>
+			
+
+		</ul>
+
+	</div>
+
+
+	<!-- Not 100% sur eif we need this here -->
+	<script>
+
+		// Used to toggle the menu on small screens when clicking on the menu button
+		function myFunction() {
+			var x = document.getElementById("navDemo");
+			if (x.className.indexOf("w3-show") == -1) {
+				x.className += " w3-show";
+			} else {
+				x.className = x.className.replace(" w3-show", "");
+			}
+		}
+
+		// When the user clicks anywhere outside of the modal, close it.
+		var modal = document.getElementById('ticketModal');
+		window.onclick = function (event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+
+		var shareDropdown = document.getElementById('share-dropdown');
+		function ShowOptions() {
+			shareDropdown.classList.toggle("show");
+			shareDropdown.classList.toggle("hide");
+		}
+
+		var following = 0;
+		var followButton = document.getElementById("follow-profile");
+		function FollowUpdate() {
+			if (following == 0) {
+				following = 1;
+				followButton.innerText = "Following";
+			}
+			else {
+				following = 0;
+				followButton.innerText = "Follow";
+			}
+		}
+
+	</script>
+	<!-- --------- -->
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="index.js"></script>
+
+
+
+<!-- Footer -->
+<footer style="width: 100vw;">
+	<div class="container">
+		<div class="col-3">
+			<p>Copyright © 2019 BLEEN GAMING</p>
+		</div>
+		<div class="col-1">
+			<ul class="unstyled-list">
+				<li><strong>SOMETHING</strong>
+				</li>
+				<li><a class="hyperlink-footer" href="https://www.youtube.com/watch?v=w0AOGeqOnFY">
+						Coconut</a>
+				</li>
+				<li><a class="hyperlink-footer" href="https://www.youtube.com/watch?v=tkzY_VwNIek">
+						Ocean</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-1">
+			<ul class="unstyled-list">
+				<li><strong>INFO</strong></li>
+				<li><a class="hyperlink-footer" href="#">
+						NO INFO</a>
+				</li>
+				<li><a class="hyperlink-footer" href="#">
+						STILL NO INFO</a>
+			</ul>
+		</div>
+	</div>
+</footer>
+
+
+</html>

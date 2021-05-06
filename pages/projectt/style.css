@@ -1,0 +1,330 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+:root {
+  --background: rgba(62, 65, 64, 0.85);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  /*HELPS WITH THE PADDING IN THE SITE..WIDTH WILL INCLUDE THE PADDING*/
+  text-align: center;
+  transition: all ease-in-out 250ms;
+}
+
+body {
+  background: #ADA996;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  /* FIX THE FLOATING FOOTER */
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+.container
+/*Stops the text from touching the side of the screen*/
+
+  {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.logo img{
+  
+ /* css for the logo*/
+
+}
+
+/*nav bar style start here */
+
+li, a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+  text-decoration: none;
+  list-style: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.logo {
+  cursor: pointer;
+  width: 15%;
+  height: 15%;
+}
+
+.nav_pages {
+  right: 100%;
+  list-style: none;
+}
+
+.nav_pages li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_pages li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_pages li a:hover {
+  color: #0088a9;
+}
+
+.topnav .search-container {
+  display: inline-block;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 14px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 18px;
+  background: #ddd;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+/*nav bar end*/
+
+/* side navigation styles start here */
+
+.side {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  bottom: 0;
+  width: 200px;
+  background-color: #22d1ab;
+  transform: translate3d(-200px, 0, 0);
+  transition: transform 0.6s ease;
+}
+
+.active-nav .side {
+  transform: translate3d(0, 0, 0);
+}
+
+.side ul {
+  list-style: none;
+  margin-top: 100px;
+}
+
+.side h1 {
+  text-align: center;
+  font-size: medium;
+  margin-top: 5em;
+  border-bottom: 1px solid var(--background);
+}
+
+.side ul li a {
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  color: black;
+  padding: 10px 10px;
+}
+
+.nav-toggle-btn {
+  display: block;
+  position: absolute;
+  margin-left: 10%;
+  margin-top: 20%;
+  left: 210px;
+  font-size: xx-large;
+  color: black;
+}
+
+/* END OF SIDE NAV-BAR*/
+
+
+
+
+
+
+.hyperlink {
+  color: #cccf1e;
+}
+
+/*8 COLUMN SYSTEM for the footer
+  ======================*/
+
+.clearfix::after, section::after, footer::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+[class^=col-] {
+  padding: 0 .5em;
+  float: left;
+}
+
+@media(min-width: 40rem) {
+  .col-3 {
+    width: 50%;
+  }
+  .col-1 {
+    width: 16.6666%;
+  }
+}
+
+/*END
+  =================*/
+
+/*FOOTER
+  ================*/
+
+.unstyled-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  line-height: 1.1em;
+}
+
+.unstyled-list:hover, .unstyled-list:focus {
+  color: black;
+  font-size: 1em;
+}
+
+footer {
+  position: relative;
+  background: var(--background);
+  color: #fff;
+  text-align: left;
+  padding: 5em 0;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  /* FIX FLOATING FOOTER */
+  margin-top: auto;
+}
+
+.hyperlink-footer {
+  color: white;
+  text-decoration: none;
+}
+#userheader {
+	position:relative;
+	margin-bottom: 7rem;
+	top: 100px;
+	width:100%;
+	display: block;
+}
+
+#userpic {
+	height:200px;
+	width:200px;
+	border-radius:50%;
+	float: left;
+	margin-left: 10%;
+	margin-bottom: 2%;
+}
+#userinfo {
+	float: left;
+	position: relative;
+	padding-left: 10px;
+}
+
+#username {
+	margin-left: 5%;
+	text-align: left;
+	font-size: 32px;
+	font-weight: bold;
+}
+
+#usertext {
+	text-align: left;
+	font-size: 17px;
+	margin-left: 10%;
+}
+
+/*===SIDE BAR===========
+=======CHANNEL PROFILES====*/
+
+.icon {
+	left: 20px;
+	text-overflow: ellipsis;
+}
+
+.profile-thumb {
+	border-radius: 50%;
+	width: 30px;
+	vertical-align: middle;
+}

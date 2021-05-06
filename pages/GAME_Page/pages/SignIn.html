@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Sign In</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {
+    background-repeat: no-repeat;
+  }
+
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid rgb(0, 0, 0);
+    margin: 7% 2;
+    padding: 0;
+  }
+</style>
+
+<script type="text/javascript" src="index.js"></script>
+<link rel="stylesheet" href="nav-bar.css">
+
+<!-- Place  font-awesom icon kit here-->
+<script src="https://kit.fontawesome.com/150f468951.js" crossorigin="anonymous"></script>
+<link href="style.css" type="text/css" rel="stylesheet" />
+
+
+<style>
+  body {
+    font-family: "Lato", sans-serif
+  }
+
+  .mySlides {
+    display: none
+  }
+</style>
+
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <img class="logo" src="../../Logo_Site.png" alt="logo">
+    <div class="topnav">
+
+      <nav>
+        <ul class="nav_pages">
+          <div class="search-container">
+            <form action="/action_page.php">
+              <input type="text" placeholder="Search.." name="search">
+              <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
+          <li><a href="../../index.html">Home</a></li>
+
+          <div class="dropdown">
+            <li><a href="#">Category</a></li>
+            <div class="dropdown-content">
+              <a href="PUBG.html">PUBG</a>
+              <a href="#">CSGO</a>
+              <a href="#">LOL</a>
+              <a href="#">FIFA20</a>
+            </div>
+          </div>
+          <div class="dropdown">
+          <li><a href="#">Account</a></li>
+            <div class="dropdown-content">
+              <a href="SignIn.html">Sign In</a>
+              <a href="SignUp.html">Sign Up</a>
+            </div>
+          </div>
+        </ul>
+
+      </nav>
+      
+      </label>
+
+    </div>
+    <hr />
+  </header>
+  <hr />
+<!-- Page content -->
+<center><h1 class="title" style="color: #22d1ab;">SIGN IN</h1></center><br>
+<center>
+<div id="form" class="form">
+    <form action="../../projectt/UserProfile.html" onsubmit="return login()">                     <!--When Login Successfully, move to HomePage-->
+    <div class="container">
+        <p>Welcome back to BleeN</p>
+    </div><br>
+    <ul>
+        <li class="contents">
+            <label for="email"><b>Email</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" placeholder="Enter Email" name="email" id="email" class="tbxContents" required><br>
+        </li>
+        <li class="contents">
+            <label for="psw"><b>Password</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="password" placeholder="Enter Password" name="pass" id="pass" class="tbxContents" required><br>
+        </li> 
+    </ul>
+    <br>
+        <div class="clearfix">
+          <button type="submit" class="signupbtn">Sign In</button>
+        </div>
+    </form>  
+    </div>
+</div>
+</center>
+<script>
+    document.querySelector('#email').value=localStorage.getItem('mail');
+    function login(){
+        let userValid=(localStorage.getItem('mail')==document.querySelector('#email').value);
+        let passValid=(localStorage.getItem('psw')==document.querySelector('#pass').value);
+        if(userValid && passValid){
+            alert('Welcome to BleeN');
+            return true;
+        }else{
+            alert('Wrong email or passwords');
+        }
+        return false;
+    }
+</script>
+<!-- End Page Content -->
+
+<!-- Side Menu-->
+
+<div class="side">
+
+  <a href="#" class="nav-toggle-btn"> <i class="fas fa-bars"></i> </a>
+  <h1>SUBSCRIPTIONS</h1>
+
+  <ul>
+    <li class="icon"><a href="../../STREAMER_Page/SITE/pages/streamerProfile_Shroud.html"><img class="profile-thumb"
+          src="shroud_icon.png"></img></i>Shroud</a></li>
+
+    <li class="icon"><a href="../../STREAMER_Page/SITE/pages/streamerProfile_Grimmmz.html"><img class="profile-thumb"
+          src="grimmmz_icon.png"></img></i>Grimmmz</a></li>
+
+    <li class="icon"><a href="../../STREAMER_Page/SITE/pages/streamerProfile_chocoTaco.html"><img class="profile-thumb"
+          src="chocoTaco_icon.png"></img></i>chocoTaco</a></li>
+    
+
+  </ul>
+
+</div>
+  
+  
+  <!-- Not 100% sure if we need this here -->
+  <script>
+  
+  // Used to toggle the menu on small screens when clicking on the menu button
+  function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it.
+  var modal = document.getElementById('ticketModal');
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+  <!-- --------- -->
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="index.js"></script>
+  
+  
+  <!-- Footer -->
+  <footer style="width: 100vw;"> 
+    <div class="container">
+      <div class="col-3">
+        <p>Copyright © 2019 BLEEN GAMING</p>
+      </div>
+      <div class="col-1">
+        <ul class="unstyled-list">
+          <li><strong>SOMETHING</strong>
+          </li>
+          <li><a class="hyperlink-footer" href="https://www.youtube.com/watch?v=w0AOGeqOnFY">
+              Coconut</a>
+          </li>
+          <li><a class="hyperlink-footer" href="https://www.youtube.com/watch?v=tkzY_VwNIek">
+              Ocean</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-1">
+        <ul class="unstyled-list">
+          <li><strong>INFO</strong></li>
+          <li><a class="hyperlink-footer" href="#">
+              NO INFO</a>
+          </li>
+          <li><a class="hyperlink-footer" href="#">
+              STILL NO INFO</a>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  </body>
+  
+  </html>
+  
